@@ -7,11 +7,11 @@ import 'package:mime_type/mime_type.dart';
 import 'package:redciclapp/src/models/ecoemprendimiento_model.dart';
 
 class EcoemprendimientoProvider {
-  final String _url = 'https://redciclapp-60ddb.firebaseio.com/';
+  final String _url = 'YOUR URL';
   // final _prefs = new PreferenciasUsuario();
 
   Future<bool> crearRevision(Ecoemprendimiento revision) async {
-    // final url = '$_url/revisiones.json?auth=${_prefs.token}';
+    // final url = '$_url/name.json?auth=${_prefs.token}';
     final url = '$_url/ecoemprendimientos.json';
     final resp = await http.post(url, body: ecoemprendimientoToJson(revision));
     final decodeData = json.decode(resp.body);
@@ -39,7 +39,7 @@ class EcoemprendimientoProvider {
 
   Future<String> subirimagen(File imagen) async {
     final url = Uri.parse(
-        'https://api.cloudinary.com/v1_1/redcicla-app/image/upload?upload_preset=lxswftl3');
+        'YOUR URL');
     final mimeType = mime(imagen.path).split('/'); //image
     final imageUploadRequest = http.MultipartRequest(
       'POST',
