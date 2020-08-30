@@ -3,7 +3,7 @@ import 'package:redciclapp/src/preferencias_usuario/preferencias_usuario.dart';
 import 'package:http/http.dart' as http;
 
 class UsuarioProvider {
-  final String _firebaseToken = 'AIzaSyDILsA36nmiakQBwJ8KmuF1rQyZY_cqGxA';
+  final String _firebaseToken = 'token' ;
   final _prefs = new PreferenciasUsuario();
 
   Future<Map<String, dynamic>> login(String email, String password) async {
