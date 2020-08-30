@@ -4,11 +4,11 @@ import 'package:http/http.dart' as http;
 import 'package:redciclapp/src/models/separador_model.dart';
 
 class CentroAcopioProvider {
-  final String _url = 'https://redciclapp-60ddb.firebaseio.com/';
+  final String _url = 'YOUR URL';
   // final _prefs = new PreferenciasUsuario();
 
   Future<bool> crearRevision(Separador revision) async {
-    // final url = '$_url/revisiones.json?auth=${_prefs.token}';
+    // final url = '$_url/name.json?auth=${_prefs.token}';
     final url = '$_url/separadores.json';
     final resp = await http.post(url, body: separadorToJson(revision));
     final decodeData = json.decode(resp.body);
